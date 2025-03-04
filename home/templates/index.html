@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-slate-50">
+    <nav class="flex justify-between items-center bg-green-900 text-white py-9 px-8 z-20">
+        <a href="{% url 'home' %}">home</a>
+        <ul class="flex justify-between items-center">
+            <li><a href="{% url 'about' %}">about</a></li>
+        </ul>
+    </nav>
+    <div class="px-8 py-6">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
